@@ -10,8 +10,8 @@ public class SqlCrud {
 //        in.anotherTry();
         
         delete del = new delete(); 
-        System.out.println("Deleting data INSIDE the loop");
-        del.deleteData();
+//        System.out.println("Deleting data INSIDE the loop");
+//        del.deleteData();
 //        System.out.println("Deleting data OUTSIDE the loop");
 //        del.delete();
         
@@ -21,6 +21,22 @@ public class SqlCrud {
 //        System.out.println("Retrieving data OUTSIDE the loop");
 //        ret.retrieve();
         
+        mongoInsert mongInsert = new mongoInsert();
+//        System.out.println("Retrieving data INSIDE the loop");
+//        mongInsert.mongoInsert();
+//        System.out.println("Retrieving data OUTSIDE the loop");
+//        mongInsert.mongoInsertOutsideLoop();
         
+        mongoDelete mongDel = new mongoDelete();
+//        System.out.println("Retrieving data INSIDE the loop");
+//        mongDel.delete();
+//        System.out.println("Retrieving data OUTSIDE the loop");
+//        mongDel.mongoDeleteOutsideLoop();
+
+        mongoRetrieve mongRet = new mongoRetrieve();
+        System.out.println("Retrieving data INSIDE the loop");
+        mongRet.mongoRetrieve();
+//        System.out.println("Retrieving data OUTSIDE the loop");
+//        mongRet.mongoDeleteOutsideLoop();
     }
 }

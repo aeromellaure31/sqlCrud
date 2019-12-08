@@ -15,7 +15,7 @@ public class insert {
     static final String PASS = "";
 
     public void ins() {
-        SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss.SSS");
+        SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss");
 //        String insertQuery = String.format("INSERT INTO tblInsert(Column1,Column2,Column3,Column4,Column5) VALUES ('%d', '%d', '%d', '%d', '%d')", );        
         Connection conn = null;
         Statement stmt = null;
@@ -23,7 +23,7 @@ public class insert {
         Date stop = null;
         try {
             Date date = new Date();
-            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss. ");
+            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
             String dateStart = sdf.format(date);
             System.out.println("Time Started: " + sdf.format(date));
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
@@ -33,7 +33,7 @@ public class insert {
             }
             conn.close();
             Date stopDate = new Date();
-            SimpleDateFormat newFormat = new SimpleDateFormat("HH:mm:ss.SSS");
+            SimpleDateFormat newFormat = new SimpleDateFormat("HH:mm:ss");
             String dateStop = newFormat.format(stopDate);
             System.out.println("Time Stop: " + newFormat.format(stopDate));
             try {
