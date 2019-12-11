@@ -4,8 +4,6 @@ package sqlcrud;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.*;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class retrieve {
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
@@ -46,7 +44,7 @@ public class retrieve {
             double stop = System.currentTimeMillis();
             System.out.println(stop);
             double timeConsumed = (stop-start)/1000;
-            System.out.println("Total time consumed: " + timeConsumed);
+            System.out.println("Total time consumed: " + timeConsumed + " seconds");
         }
     }
     
@@ -58,9 +56,13 @@ public class retrieve {
         try {
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
             stmt = conn.createStatement();
-            ResultSet rsAccount = stmt.executeQuery(String.format("SELECT AVG(Column1) FROM tblInsert"));
+            ResultSet rsAccount = stmt.executeQuery(String.format("SELECT AVG(Column1), AVG(Column2), AVG(Column3), AVG(Column4), AVG(Column5) FROM tblInsert"));
             rsAccount.next();
             System.out.println(rsAccount.getFloat("AVG(Column1)"));
+            System.out.println(rsAccount.getFloat("AVG(Column2)"));
+            System.out.println(rsAccount.getFloat("AVG(Column3)"));
+            System.out.println(rsAccount.getFloat("AVG(Column4)"));
+            System.out.println(rsAccount.getFloat("AVG(Column5)"));
             conn.close();
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
@@ -69,7 +71,7 @@ public class retrieve {
             double stop = System.currentTimeMillis();
             System.out.println(stop);
             double timeConsumed = (stop-start)/1000;
-            System.out.println("Total time consumed: " + timeConsumed);
+            System.out.println("Total time consumed: " + timeConsumed + " seconds");
         }
     }
 }

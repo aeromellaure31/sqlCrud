@@ -4,8 +4,8 @@ public class SqlCrud {
 
     public static void main(String[] args) {
         insert in = new insert();
-        System.out.println("Inserting data INSIDE the loop");
-        in.ins();
+//        System.out.println("Inserting data INSIDE the loop");
+//        in.ins();
 //        System.out.println("\nInserting data OUTSIDE the loop");
 //        in.anotherTry();
         
@@ -24,8 +24,8 @@ public class SqlCrud {
         mongoInsert mongInsert = new mongoInsert();
 //        System.out.println("Retrieving data INSIDE the loop");
 //        mongInsert.mongoInsert();
-//        System.out.println("Retrieving data OUTSIDE the loop");
-//        mongInsert.mongoInsertOutsideLoop();
+        System.out.println("Retrieving data OUTSIDE the loop");
+        mongInsert.mongoInsertOutsideLoop();
         
         mongoDelete mongDel = new mongoDelete();
 //        System.out.println("Retrieving data INSIDE the loop");

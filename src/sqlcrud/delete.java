@@ -4,8 +4,6 @@ package sqlcrud;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.*;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class delete {
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
@@ -30,7 +28,7 @@ public class delete {
             double stop = System.currentTimeMillis();
             System.out.println(stop);
             double timeConsumed = (stop-start)/1000;
-            System.out.println("Total time consumed: " + timeConsumed);
+            System.out.println("Total time consumed: " + timeConsumed + " seconds");
         }
     }
     
@@ -51,7 +49,7 @@ public class delete {
             double stop = System.currentTimeMillis();
             System.out.println(stop);
             double timeConsumed = (stop-start)/1000;
-            System.out.println("Total time consumed: " + timeConsumed);
+            System.out.println("Total time consumed: " + timeConsumed + " seconds");
         }
     }
 }
